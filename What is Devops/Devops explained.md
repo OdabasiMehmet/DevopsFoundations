@@ -15,7 +15,7 @@ Traditionally, software development and IT operations were separate teams with d
 It is all about collaboration, automation, continuous feedback, and continuous improvement. By working together and continuously improving their processes, teams can reduce the time it takes to deliver software while also increasing its quality and reliability.
 This principles will make more sense once we dive into the core concepts and tools utilized by Devops engineers.
 
-# What are some of the most popular tools and technologies used by Devops?
+## What are some of the most popular tools and technologies used by Devops?
 
 As I mentioned at the beginning, Devops is a vast field and there are numerous tools that are used by Devops engineers. However, some of these tools have become standart in the field.
 
