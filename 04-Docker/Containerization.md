@@ -7,3 +7,10 @@ While the VMs was a major step, they were not sufficient enough to solve the pro
 Containerization is the packaging of software code with just the operating system (OS) libraries and dependencies required to run the code to create a single lightweight executable—called a container—that runs consistently on any infrastructure. More portable and resource-efficient than virtual machines (VMs), containers have become the de facto compute units of modern cloud-native applications.
 
 ## Hypervisor vs. Docker Engine
+Hypervisor and Docker Engine are both tools used to create and manage virtual environments, but they do so in different ways.
+
+A hypervisor, also known as a virtual machine manager, is a software tool that creates and manages virtual machines (VMs). Each VM created by a hypervisor runs a separate operating system and has its own virtual hardware, including CPU, memory, and storage. This allows multiple virtual environments to run on a single physical machine, with each environment fully isolated from the others.
+
+On the other hand, Docker Engine is a containerization platform that allows you to create and manage containers. Containers are similar to VMs in that they provide an isolated environment for running applications, but they do so by sharing the host operating system kernel rather than running a separate operating system in each container. This makes containers more lightweight and efficient than VMs.
+
+In summary, hypervisors create and manage separate virtual machines with their own operating systems and virtual hardware, while Docker Engine creates and manages containers that share the host operating system kernel. 
