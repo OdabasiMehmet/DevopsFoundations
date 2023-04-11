@@ -1,0 +1,9 @@
+## Virtualization
+The best way to understand Docker and containerization is to understand the evolution starting from virtualization. Before virtualization, companies used computers to host their applications. However, considering the many factors that require isolation of application and databases, companies had to use a considerable amount of such computers. The problem was that these computers were most of the time not being used to their full capacities. Because, some of them were just used to store data that in terms of compute resources did not require much resources.
+Virtul machines(VM) was a major step in solving that problem. A virtual machine is an emulation of a computer system. Put simply, it makes it possible to run what appears to be many separate computers on hardware that is actually one computer.
+In a virtual machine, valuable resources are emulated for the guest OS and hypervisor, which makes it possible to run many instances of one or more operating systems in parallel on a single machine (or host). Every guest OS runs as an individual entity from the host system.
+## Containerization
+While the VMs was a major step, they were not sufficient enough to solve the problem. The real solution to the problem came with the Container technology. 
+Containerization is the packaging of software code with just the operating system (OS) libraries and dependencies required to run the code to create a single lightweight executable—called a container—that runs consistently on any infrastructure. More portable and resource-efficient than virtual machines (VMs), containers have become the de facto compute units of modern cloud-native applications.
+
+## Hypervisor vs. Docker Engine
