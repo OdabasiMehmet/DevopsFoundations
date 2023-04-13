@@ -1,0 +1,5 @@
+Version control systems are one of the most important tools of the IT world. These systems allow developers to keep track of their code while sharing the code with other developers. Furthermore, online version control systems, such as GitHub, GitLab and Bitbucket  provide an environment where a team of developers can collaborate and work on the same code simultaneously.
+
+VCS enable developers to track changes to the codebase over time, including who made the changes and when they were made. This makes it easier to identify and fix issues, collaborate on code with other developers, and roll back changes if necessary.
+
+Online version control systems allow developers to store their code in a centralized repository, where other team members can access and modify the code as needed. They also provide tools for code review, issue tracking, and continuous integration/continuous delivery (CI/CD), which can streamline the development process and improve code quality.
