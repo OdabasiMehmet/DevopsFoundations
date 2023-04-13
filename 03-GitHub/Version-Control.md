@@ -1,3 +1,9 @@
+Developers write codes in order to create applications. In the mean time, they store these codes in repositories. The location of the repository may differ and may be their own personal computers, work computers, or online repositories.
+
+But how do they share these codes with other developers? Or how do they keep track of all the changes they have made to their codes in time? What happens if they need to go back to a previous state of their codes? What hapens if they need to work as a team and need to review codes of other team members?
+
+Well, the answers to all these questions lie in Version Control Systems.
+
 Version control systems are one of the most important tools of the IT world. These systems allow developers to keep track of their code while sharing the code with other developers. Furthermore, online version control systems, such as GitHub, GitLab and Bitbucket  provide an environment where a team of developers can collaborate and work on the same code simultaneously.
 
 VCS enable developers to track changes to the codebase over time, including who made the changes and when they were made. This makes it easier to identify and fix issues, collaborate on code with other developers, and roll back changes if necessary.
