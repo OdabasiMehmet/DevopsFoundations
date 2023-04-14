@@ -42,3 +42,54 @@ You can also set up a default editor
 ```bash
 git config --global core.editor nano
 ```
+## Default branch 
+
+By default Git will create a branch called master when you create a new repository with git init. If you want to use main instead of master, then run the following command.
+
+```bash
+git config --global init.defaultBranch main
+```
+
+## Configuration
+
+If you want to see a list of your configuration, such as the user and user email, then run the following command
+
+```bash
+git config --list
+```
+
+## How to get Help
+
+Just run `git help`to get help about git.
+
+You can also get help on a specific command such as `git help config`
+
+## Initializing a Repository
+
+While working locally, there are two ways to use a folder as a Git Repo. 
+1. You create a new directory (folder) to work on and turn that new directory into a local repo.
+
+```bash
+mkdir mynewfolder
+cd mynewfolder
+git init
+```
+
+When you run `git init`command, Git will create a .git hidden folder that contains all of your necessary repository files.
+
+2. Clone an existing repository
+
+You may have access to an existing Git repository (either any public repo on Github or a project that you work with your team members)
+
+```bash
+git clone https://github.com/repoaddress
+```
+Then simply cd into that directory
+
+## Making Changes and Keeping track of the Changes
+
+You can add a new file or modify an existing file in your Git repository. If you want to see if there have been any changes in your Git repository, you can run the status command.
+
+```bash
+git status
+``` 
