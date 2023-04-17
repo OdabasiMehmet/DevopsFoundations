@@ -127,3 +127,25 @@ git branch -r
 git branch -a
 ```
 
+To create a new branch we simply provide a name after git branch command
+
+```bash
+git branch mynewbranch
+```
+
+If you want to use that branch, then you need to swicth to that branch. We use git checkout command to wsith to a new branch
+
+```bash
+git checkout mynewbranch
+```
+
+There is actually a shortcut to this operation. Instead of first creating the branch and then checkout to that brahc, we use git checkout command with -b flag which creates and switches to a new branch.
+
+```bash
+git checkout -b newbranch
+```
+To delete a branch, we use the -d flag (Capital D to delete it forcefully)
+
+```bash
+git branch -d mynewbranch
+```
