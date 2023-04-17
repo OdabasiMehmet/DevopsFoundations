@@ -93,3 +93,17 @@ You can add a new file or modify an existing file in your Git repository. If you
 ```bash
 git status
 ``` 
+
+Imagine that you have worked on some files and saved them. They will be seen as unttacked changes in the git status. In order to add them to staging area, you should use git add command.
+
+```bash
+git add .
+```
+
+Note the . at the end of the command denoting the current directory. In other words, it lets the system know where to find the files that will be added to the staging area.
+
+Once the files are added, they are ready to be committed. By committing, what we do is actually take a snapshot of the current state of the files, just like doing a save as operation in a word document. While doing a commit, we also add a message that explains the nature of the commit.
+
+```bash
+git commit -m "Python code modified"
+```
