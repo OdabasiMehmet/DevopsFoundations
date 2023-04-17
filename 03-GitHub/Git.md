@@ -102,8 +102,28 @@ git add .
 
 Note the . at the end of the command denoting the current directory. In other words, it lets the system know where to find the files that will be added to the staging area.
 
+Also know that you can specify the file to be added to staging area by name since we are working in the same directory. But having the dot removes the necessity to write down the names of each individual files and simply add all modified files in the working directory.
+
 Once the files are added, they are ready to be committed. By committing, what we do is actually take a snapshot of the current state of the files, just like doing a save as operation in a word document. While doing a commit, we also add a message that explains the nature of the commit.
 
 ```bash
 git commit -m "Python code modified"
 ```
+
+## Branches and Merging
+
+When working with git, we use branches to isolate our work from the main branch or the other branches. Think of each branch as a seperate person working on the same set of files. When you create a branch from the main branch, or let's say main original file, what you do is actually cloning the main file and using an isolated version of it. Therefore, when you work in a specific branch, the main branch stays intact until we decide to merge the new branch into the main branch.
+
+To see a list of current branches we use git branch command.
+
+```bash
+git branch
+```
+
+To see the remote branches, we can use the -r flag, and to see all local and remote branches we can use the -a flag along with the git branch command.
+
+```bash
+git branch -r
+git branch -a
+```
+
