@@ -1,0 +1,3 @@
+EC2 service provides numerous instance types to meet the needs of the customers. It is essential to master instance types as they affect the amount of monthly AWS bills significantly. AWS offers a pay as you go model and using any unnecesary component increases the cost of AWS services. Therefore, it is crucial to choose the instance types wisely and know how to calculate spendings based on thse instance types.
+
+As mentioned in the AWS.md file, AWS offers a pricing calculator that you can use to calculate projected fees based on specific instance types. As a cloud expert, you should be able to know the different kinds of instance types and which ones should be used in order to be able to operate while keeping the costs lower.

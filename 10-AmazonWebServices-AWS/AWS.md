@@ -18,3 +18,11 @@ Security: AWS Identity and Access Management (IAM), Amazon Certificate Manager, 
 Management and Governance: AWS Management Console, Amazon CloudWatch, AWS CloudFormation
 
 AWS also offers a wide range of developer tools, analytics, artificial intelligence, and Internet of Things (IoT) services to help businesses innovate and grow.
+
+# AWS Pricing calculator
+
+AWS offers a great range of services but all of those services come with a certain cost. Therefore, it is crucial to foresee the projected monthly expenses before using AWS services.
+
+AWS has a pricing calculator service which you can access by visiting https://calculator.aws. Here, you can create an estimate of cost by simply selecting and configuring any services. 
+
+![Pricing-calculator](Price-calculator.png)
