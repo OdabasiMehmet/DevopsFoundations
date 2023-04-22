@@ -13,4 +13,5 @@
 * git push: Upload the committed files in the local branch to the remote repo
 * git merge: Integrate one branch into another branch
 * git log: Explore the revisions made in a project
-* git reset: Undoes changes to the files in the working directory that have not been pushed yet.
+* git log --pretty=oneline: Provides the logs in single lines
+* git reset: Undoes changes to the files in the working directory that have not been pushed yet. (hard, soft, mixed flags)
