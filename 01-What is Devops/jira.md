@@ -28,5 +28,6 @@ You are either an administrator or a user in Jira. In Jira, work items are calle
 * Issue cards: They are actually issues which are individual work items.
 * Board columns: Depending on how you structure it, boards have several columns. Most widely used are to do, in progress, in review and done columns.
 * Workflow: All the columns of a board presents a workflow. Starting from to do and ending with done, the boards actually display workflows.
+* Status: Status shows the current progress of an issue, such as in-progress and done.
 * Kanban boards vs scrum boards: Kanban is used by all types of teams whereas scrum is mostly used by software development teams.
 * Board name: Projects may have multiple boards and each board is named individually. You can see all of the boards from the left navigation pane by clicking on dropdown menu.
