@@ -14,4 +14,6 @@
 * git merge: Integrate one branch into another branch
 * git log: Explore the revisions made in a project
 * git log --pretty=oneline: Provides the logs in single lines
+* git log --author="Johndoe": Provides logs for commits by Johndoe
+* git log --name-status: Provides a list of changed files in a commit
 * git reset: Undoes changes to the files in the working directory that have not been pushed yet. (hard, soft, mixed flags)
