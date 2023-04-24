@@ -12,5 +12,5 @@ cd node_exporter-1.4.0.linux-amd64
 ## To verify `whether node exporter is working
 
 ```bash
-curl localhost:9100/metrics
+curl localhost:9100/metrics #open in a new terminal
 ```
