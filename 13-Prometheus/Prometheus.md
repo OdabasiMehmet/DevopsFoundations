@@ -1,11 +1,13 @@
 ## Prometheus Overview
-* When we have any type of application or a service, it is an essential practice to monitor the service in order to spot and prevent problems that would lead to service downtime. One of the most common tools that is widely used among engineers is Prometheus.
+* When we have any type of application or a service, it is an essential practice to monitor the service in order to spot and prevent problems that would lead to service downtime. Furthermore, we would want to see how well our application or service performs. One of the most common monitoring tools that is widely used among engineers is Prometheus.
 
 * Prometheus is an open-source monitoring tool that collects numeric metrics and saves them as time series data in order to monitor your infrastructure. Prometheus collects metrics by scraping targets who expose metrics through an HTTP endpoint. 
 
+* Some examples of the metrics are, CPU/Memorry utilization, disk space, service uptime, and application specific metrics, such as latency.
+
 * Prometheus is written in GoLang and it uses PromQI as the query language.
 
-* Prometheus works as a pull system.
+* Prometheus works as a pull system. The targets do not send data. Prometheus pulls the data.
 
 ## Installation
 
@@ -39,15 +41,18 @@ When you install and start Prometheus, it runs in the foreground. If we close th
 
 ```bash
 sudo useradd prometheus — no-create-home — shell /bin/false
-sudo mkdir /etc/prometheus
-sudo mkdir /var/lib/prometheus
-sudo chown prometheus:prometheus /etc/prometheus
+sudo mkdir /etc/prometheus #for configuration file
+sudo mkdir /var/lib/prometheus #to store data
+sudo chown prometheus:prometheus /etc/prometheus 
 sudo chown prometheus:prometheus /var/lib/prometheus
+wget https://github.com/prometheus/prometheus/releases/download/v2.41.0/prometheus-2.41.0.linux-amd64.tar.gz
+tar xvf prometheus-2.41.0.linux-amd64.tar.gz
+cd prometheus-2.41.0.linux-amd64/
 sudo cp prometheus /usr/local/bin # Be sure that you are in the prometheus-2.41.0.linux-amd64 directory
 sudo cp promtool /usr/local/bin
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
-sudo cp -r consoles /etc/prometheus
+sudo cp -r consoles /etc/prometheus # for dashboard
 sudo cp -r console_libraries /etc/prometheus
 sudo chown -R prometheus:prometheus /etc/prometheus/consoles
 sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
@@ -57,8 +62,8 @@ sudo vi /etc/systemd/system/prometheus.service # Enter the contents below
 
 [Unit]
 Description=Prometheus
-Wants=network-online.target
-After=network-online.target
+Wants=network-online.target #this ensures the service is up only if the network is up
+After=network-online.target # because if no network, no need to have prometheus work
 
 [Service]
 User=prometheus
@@ -71,7 +76,7 @@ ExecStart=/usr/local/bin/prometheus \
     --web.console.libraries=/etc/prometheus/console_libraries
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.target #start service as part of normal system start up
 
 
 :wq to save and exit
