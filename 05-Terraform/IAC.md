@@ -15,7 +15,7 @@ Scaling up and down the infrastrucrure is also very convenient in cloud services
 Cloud providers make it very easy to spin up infrastructure through their online consoles or user interfaces. Also, all of them offer terminal tools so that users can spin up infrastructure through their terminals. However, this method is not feasible for large organizations with numerous compute resources.
 At first, many organizations developed codes through programming languages, such as Python and Powershell in terms of automating this process. Throughtout time, many tools are emerged that all aim for the same purpose. We call them infrastructure as code.
 
-The way it works is that, these tools code the entire infratsructure provisioning process. By this way, we can define and execute the code to create, update, and terminate infrastructure components.
+The way it works is that, these tools code the entire infratsructure provisioning process. By this way, we can define and execute the code to create, update, and terminate infrastructure components. Also, the code is reusable.
 
 Tools, suchs Terraform and Ansible are very popular in terms of provisioning and configuring infrastructure. Other prominent IAC tools are Vagrant, Packer, Puppet, Saltstack, CloudFormation and Docker.
 
@@ -27,7 +27,7 @@ Thse tools are idempotents which means that no matter how many times you run the
 
 2. Server Templating: Docker, packer, and Vagrant
 
-Thse tools prepare images that contained pre installed software and dependencies. However, when there is a need to update the images, they have to be redeployed with the updated image.
+These tools prepare images that containe pre installed software and dependencies. However, when there is a need to update the images, they have to be redeployed with the updated image. Because they are immutable.
 
 3. Provisioning tools: Terraform and CloudFormation
 
