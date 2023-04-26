@@ -41,3 +41,24 @@ terraform apply # will need to confirm
 ```bash
 terraform show
 ```
+
+## Update the code
+
+Just modify the .tf file
+
+```hcl
+resource "local_file" "pet" {
+  filename = "/pets.txt"
+  content = "We love pets!"
+  file_permission = "0700"
+  } 
+  ```
+```bash
+terrraform apply # type yes to confirm
+```
+
+## Delete the resource
+
+```bash
+terrraform destroy # type yes to confirm
+```
