@@ -11,6 +11,9 @@ Azure
 
 4. Database tools, such as InfluxDB, MongoDB, MySQL, PostgreSQL, VCS
 
+* Official providers: AWS, GCP
+* Partner providers: bigjp, heroku
+* Community providers: active driectory, ucloud
 
 Terraform uses a declarative approach for creating infrastructure and works in three phases to do that.
 
