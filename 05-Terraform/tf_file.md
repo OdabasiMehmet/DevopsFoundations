@@ -62,3 +62,4 @@ terrraform apply # type yes to confirm
 ```bash
 terrraform destroy # type yes to confirm
 ```
+

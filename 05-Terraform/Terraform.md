@@ -24,3 +24,7 @@ Terraform uses a declarative approach for creating infrastructure and works in t
 3. Terraform makes necessary changes to make sure the real world infrastructure is the same with the desired state.
 
 The objects that are managed by Terraform are called resources. So the tf files are consisted of resources and providers blocks. Terraform can also import infrastructure which was created outside of terraform.
+
+## Plugins
+
+When terraform init command is run, plugins for terraform providers are downloaded to the plugins folder under .terraform directory. Without inint command , there are no plugins in that directory. So, if you want to check the currently loaded plugins for providers, you should check the .terrform directory inside your project folder.
