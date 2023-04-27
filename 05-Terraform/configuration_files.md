@@ -78,3 +78,34 @@ If we have multiple values assigned to the same variable in different files, suc
 2. terraform.tfvars
 3. *.auto.tfvars
 4. -var or -var-file (Highest)
+
+
+## Using interpolation sequences in naming resources
+
+Interpolation sequences help dynamically generate names for resources in Terraform. For example, you may use a resource, such as pet-name generator, and want to use the generated name as the name of another resource. In such cases, we use ${random_pet.my-pet.id} to name the resource.
+
+You may wonder where that expression came from. Well, it comes from the random_pet generator below. Below code will generate an id which is a string that consists of the pet name.
+
+```hcl
+resource "random_pet""my-pet" {
+    prefix = var.prefiz
+}
+
+We can use other examples for interpolation sequences. For example, you might want to create multiple instances of an EC2 instance, each with a unique name. You could use an interpolation sequence to generate a unique name for each instance:
+
+```hcl
+resource "aws_instance" "example" {
+  count = 3
+
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+  subnet_id     = aws_subnet.private.id
+  key_name      = aws_key_pair.example.key_name
+  tags = {
+    Name = "example-${count.index + 1}"
+  }
+}
+```
+In this example, the tags block uses an interpolation sequence to generate a unique name for each instance. The ${count.index} interpolation references the current index of the count loop, and we add 1 to make the name more user-friendly.
+
+When Terraform creates the resources, it will generate three instances named "example-1", "example-2", and "example-3".
