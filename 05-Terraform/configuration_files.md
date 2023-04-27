@@ -54,3 +54,27 @@ resource "local_file"  "pet"{
 }
 
 ```
+
+## Other methods to use variables
+
+We can employ variables in terraform using terraform apply followed by -var to denote variables. So by using -var followed by variables, we can point multiple variables to be used.
+
+Another method is to create a new file with a tfvars or auto.tfvars extension. These files are automatically loaded by Terraform if the names are terraform.tfvars or *.auto.tfvars. However, if we provide another name, such as variables.tfvars, then we need to address them in the terraform apply command with a -var-file flag.
+
+When createing the variables.tf file, we used blocks to define the variable; however, when createing auto.tfvars file, we just enter key value pairs.
+
+Also, we can export environmet variables in the TF_VAR_variablename format.
+
+```bash
+export TF_VAR_filename = "/root/cats.txt"
+```
+
+## Precedence of variables
+
+If we have multiple values assigned to the same variable in different files, such as variables.tf, autotf.vars, then terraform accepts the value which has the most precedence over the others.
+
+
+1. Environment variables (Lowest)
+2. terraform.tfvars
+3. *.auto.tfvars
+4. -var or -var-file (Highest)
