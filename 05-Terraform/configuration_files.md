@@ -23,3 +23,34 @@ resource "local_file"  "pet"{
     filename= var.filename
     contents = var.content
 }
+
+```
+Once we have the variables.tf, all we need to do is to change the values in the variables.tf instead of the main.tf.
+
+## Optional parameters in variables.tf
+
+We can also add type as a parameter. By default, it is any type if not entered. Once we enter the types, we can make use of the variables in accordance with the type of the variables. For example, we can use a list type and enter multiple values in a single variable. Then we should add an index value to make sure that the variable takes what we really want.
+
+### Example
+
+```hcl
+variable "prefix" {
+    default = ["mr" , "mrs" ,"ms"]
+    type = list
+}
+variable "content" {
+    type = map
+    default = {
+        "statement1" ="We love pets"
+        "statement2" ="We love birds"
+    }
+}
+```
+
+```hcl
+resource "local_file"  "pet"{
+    prefix= var.prefix[0]
+    contents = var.content["statement1"]
+}
+
+```
