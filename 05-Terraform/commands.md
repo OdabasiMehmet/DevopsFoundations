@@ -8,7 +8,7 @@ Here is a list of terraform commands
 
 * terraform validate: Check terraform sysntax before running plan or apply command.
 
-* terraform format: Scan the configuration file and improve the readability of the code by formatting it into a canonical format.
+* terraform fmt: Scan the configuration file and improve the readability of the code by formatting it into a canonical format.
 
 * terraform show: Print out the current state of the resources
 
