@@ -109,3 +109,27 @@ resource "aws_instance" "example" {
 In this example, the tags block uses an interpolation sequence to generate a unique name for each instance. The ${count.index} interpolation references the current index of the count loop, and we add 1 to make the name more user-friendly.
 
 When Terraform creates the resources, it will generate three instances named "example-1", "example-2", and "example-3".
+
+
+## Output variables:
+
+When we apply terraform apply command, terraform creates infrastructure based on our input in the main.tf file. The infrastructure we create have a lot of attributes, such as the IP address of an EC2 instance in AWS. We can make use of this attributes for creating other resources or for other reasons. Terraform offers output variables to get the values of such attributes.
+
+To create output variables we use the output block followed by the name of the output. Then we use curl braces to enter output information.
+
+### Example
+
+```hcl
+output "instance_ip_addr" {
+    value = aws_instance.my-machine.public.ip
+    description = "The public IP address of the main server instance."
+}
+
+resource "aws_instance" "my-machine" {
+  ami = var.ami 
+  instance_type = var.instance_type 
+  subnet_id     = aws_subnet.publicsubnets.id
+  tags = {
+    Name = "my-ec2-machine"
+  }
+}
