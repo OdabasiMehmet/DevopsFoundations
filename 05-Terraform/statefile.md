@@ -1,0 +1,4 @@
+Terraform stores the state of the infrastructure and configuration. This state is used by terraform to map real world infrastructure to your configuration and keep track of the metadata.
+Terraform state file is located in the configuration directory by default. However, we can store the state file on a remote location, such as an S3 bucket in AWS.
+The state ile is stored as a jason file and named terraform.tfstate.
+The state is first created when we run the terraform apply command. Before that, there is no terraform state file. In order to see the details of the tfsate, we can use `terraform show`command.
