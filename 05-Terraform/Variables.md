@@ -133,3 +133,13 @@ resource "aws_instance" "my-machine" {
     Name = "my-ec2-machine"
   }
 }
+
+```
+To retrive output variables, we can either use `terraform output`command or `terraform output variable_name`command. The first brings all of the output variables while the second brings out the specified variable.
+
+
+### Example
+
+```bash
+terraform output instance_ip_addr # based on the example above
+```
