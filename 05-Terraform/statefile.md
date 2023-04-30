@@ -14,3 +14,20 @@ Version control systems, such as Github does not support state locking system. A
 Terraform offers a remote backend option through providers, such as AWS S3, Hashicorp Consul, Google Cloud Storage and Terraform Cloud.
 
 When we make use of the remote backend, terraform will automatically pull the latest version of the state file from the shared remote backend whenever it is needed. Also, after each apply, the state file is uploaded to remote backend.
+
+## S3 as Remote Backend
+
+If we want to use AWS S3 as a remote backend, we should configure it in a terraform backend block. We will need a S3 bucket reserved for terraform state files, a key name, and region and information. We also need a dynamodb table for state locking purposes which is an optional step.
+
+The block will seem like this:
+
+```hcl
+terraform {
+  backend "s3" {
+    bucket   = "terraformbucket"
+    key      = "devops/terraform.tfstate" # if we keep the state files in devops folder
+    region   = "eu-west-0"
+    dynamodb_table = "state-locking" # This is optional
+  }
+}
+```
