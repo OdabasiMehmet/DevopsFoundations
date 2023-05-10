@@ -88,7 +88,7 @@ You may wonder where that expression came from. Well, it comes from the random_p
 
 ```hcl
 resource "random_pet""my-pet" {
-    prefix = var.prefiz
+    prefix = var.prefix
 }
 
 We can use other examples for interpolation sequences. For example, you might want to create multiple instances of an EC2 instance, each with a unique name. You could use an interpolation sequence to generate a unique name for each instance:

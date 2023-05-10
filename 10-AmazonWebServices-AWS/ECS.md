@@ -6,3 +6,7 @@ ECS offers two types of launch types: EC2 and Fargate. Infrastructure is compose
 
 * When using EC2 launch types, we are responsible for managing the underlying EC2 instances. That means, we have to create EC2 instances and install docker, ECS agent and and other software on them. However, we have full control over the cluster.
 * Fargate: AWS manages the underlying infrastructure. Fargate follows a serverless architecture. There are no physical servers that we have to create. Fargate will handle them once we choose Fargate and start creating the cluster. Fargate will create resources when we need them so we only pay for what we use.
+
+## ECS Task
+
+Task definition files are the blueprints of the containers. They contain all the information regarding a container just like the docker-compse.yml file.
