@@ -37,3 +37,5 @@ name: The name of the container.
 image: The container image to be run.
 ports: The list of ports to be exposed by the container. In this example, we have exposed port 80.
 ```
+
+Note: In order to create pods, replicasets, or deployments, you can use `kubectl apply -f` followed by the name and path of the manifest (yaml) files.
