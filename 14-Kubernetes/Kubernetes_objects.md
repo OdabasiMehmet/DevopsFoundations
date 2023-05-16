@@ -22,6 +22,7 @@ Deployments in Kubernetes are objects that manage the deployment of new versions
 A Deployment object specifies how many replicas of an application should be running at any given time, and provides a way to update or roll back the application to a previous version without downtime. It also allows for rolling updates, which means that new versions of an application can be gradually deployed, replacing old versions one at a time, ensuring that the application is always available to users.
 
 * Check deployment.yaml file within this directory to see a simple deployment definition file.
+```bash
 apiVersion: The API version of the Deployment resource. In this case, it's apps/v1.
 kind: The type of resource. In this case, it's Deployment.
 metadata: Information about the resource, such as its name.
@@ -35,3 +36,4 @@ containers: The list of containers to be run in the Pod. In this example, we hav
 name: The name of the container.
 image: The container image to be run.
 ports: The list of ports to be exposed by the container. In this example, we have exposed port 80.
+```
