@@ -6,6 +6,8 @@ In a virtual machine, valuable resources are emulated for the guest OS and hyper
 While the VMs was a major step, they were not sufficient enough to solve the problem. The real solution to the problem came with the Container technology. 
 Containerization is the packaging of software code with just the operating system (OS) libraries and dependencies required to run the code to create a single lightweight executable—called a container—that runs consistently on any infrastructure. More portable and resource-efficient than virtual machines (VMs), containers have become the de facto compute units of modern cloud-native applications.
 
+* Note: Most applications require dependencies and work with specific version of OS and other softwares. When multiple applications require different sets of dependencies, it is not easy to have them work under the same VM. In such cases, having each application under a separate container solves this problem.
+
 ## Hypervisor vs. Docker Engine
 Hypervisor and Docker Engine are both tools used to create and manage virtual environments, but they do so in different ways.
 
