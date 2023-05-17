@@ -1,0 +1,1 @@
+The main purpose of Docker is to containerize applications and to ship them and run them.

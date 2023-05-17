@@ -16,3 +16,12 @@ A hypervisor, also known as a virtual machine manager, is a software tool that c
 On the other hand, Docker Engine is a containerization platform that allows you to create and manage containers. Containers are similar to VMs in that they provide an isolated environment for running applications, but they do so by sharing the host operating system kernel rather than running a separate operating system in each container. This makes containers more lightweight and efficient than VMs.
 
 In summary, hypervisors create and manage separate virtual machines with their own operating systems and virtual hardware, while Docker Engine creates and manages containers that share the host operating system kernel. 
+
+* Boot up time is faster in containers as they share the kernel
+* Docker has less isolation since kernel is shared compared to VMs.
+* You can have multiple OS using hypervisor, such as Ubuntu and Windows
+* You cannot have multiple OS on a single docker host
+
+## Container vs image
+An image is a package or a template that is used to create containers.
+Containers are running instances of images that are isolated abd have their own environments and set of of processes.
