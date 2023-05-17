@@ -1,5 +1,7 @@
 Kubernetes is an open source paltform for automating the deployment, scaling, and management of containerized applications.
 Containers have become very popular way to package and deploy applications, but they can be difficult to manage at scale. Kubernetes is a container orchestration tool, that helps solve this problem by providing a unified way to manage and orchestrate containers across multiple nodes and cloud environments.
+
+* Other container orchestration tools: Docker Swarm which lacks the capabilities for complex applications and Mesos from Apache which is quite difficult to set up and get started. Kubernetes is the most popular one.
 # Terminology
 
 * Nodes: These are physical or virtual machines that run your containers
