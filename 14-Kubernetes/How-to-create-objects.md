@@ -37,3 +37,12 @@ spec:
 ```
 
 This will create a pod with the image nginx that will have a pod name of my-pod and container name of my-container. (We could also add restart policy as we did in the imperative command above.)
+
+# How to retrive information regarding objects
+
+You can get information about objects by `kubectl get `command
+
+```bash
+kubectl get pods
+kubectl get deployments
+```
